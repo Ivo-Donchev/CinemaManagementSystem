@@ -7,6 +7,8 @@ using System.Web.Optimization;
 using System.Web.Routing;
 using System.Web.Security;
 using System.Web.SessionState;
+using System.Data.Entity;
+using CinemaManagementSystem.Models;
 
 namespace CinemaManagementSystem
 {
@@ -18,6 +20,8 @@ namespace CinemaManagementSystem
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+
+            Database.SetInitializer(new CinemaManagementSystemInitializer());
         }
     }
 }
