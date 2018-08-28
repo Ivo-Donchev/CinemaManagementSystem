@@ -15,7 +15,9 @@ namespace CinemaManagementSystem.Models
         [Required, StringLength(32), Display(Name = "name")]
         public string Name { get; set; }
 
-        [ForeignKey("City")]
+        public int CityForeignKey { get; set; }
+
+        [ForeignKey("CityForeignKey")]
         public City City { get; set; }
     }
 }

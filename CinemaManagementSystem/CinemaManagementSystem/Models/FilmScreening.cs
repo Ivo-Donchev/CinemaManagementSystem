@@ -12,10 +12,14 @@ namespace CinemaManagementSystem.Models
         [ScaffoldColumn(false)]
         public int Id { get; set; }
 
-        [ForeignKey("Department")]
+        public int DepartmentForeignKey { get; set; }
+
+        [ForeignKey("DepartmentForeignKey")]
         public Department Department { get; set; }
 
-        [ForeignKey("Movie")]
+        public int MovieForeignKey { get; set; }
+
+        [ForeignKey("MovieForeignKey")]
         public Movie Movie { get; set; }
     }
 }

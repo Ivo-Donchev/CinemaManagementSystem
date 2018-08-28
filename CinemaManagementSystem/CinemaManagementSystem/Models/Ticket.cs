@@ -15,10 +15,14 @@ namespace CinemaManagementSystem.Models
         [Required, Display(Name = "price")]
         public decimal Price { get; set; }
 
-        [ForeignKey("FilmScreening")]
+        public int FilmScreeningForeignKey { get; set; }
+
+        [ForeignKey("FilmScreeningForeignKey")]
         public FilmScreening FilmScreening { get; set; }
 
-        [ForeignKey("User")]
+        public int UserForeignKey { get; set; }
+
+        [ForeignKey("UserForeignKey")]
         public User User { get; set; }
     }
 }
